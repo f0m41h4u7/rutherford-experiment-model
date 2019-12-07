@@ -19,12 +19,11 @@ dt = 10^(-15)
 h = 0.00001
 tmp = k * Au_q * alpha_q * dt / alpha_m
 
-params = [1e-14, 1e-13, 2e-13, 5e-13, -1e-13, -1e-14, 4e-13]
+params = [-1e-14, -1e-13, 1e-14, 1e-13, 2e-13, 4e-13, 5e-13]
 
 tx = [0, 1337]
 ty = [0, 1337]
 p = scatter(tx, ty, 
-	lw=kostyl, 
 	xlims = (-3e-13, 5e-13), 
 	ylims = (-3e-13, 7e-13),
 	label = "Au",
