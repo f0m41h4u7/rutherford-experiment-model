@@ -1,20 +1,20 @@
 ###########################################################
-# Build particle trajectory depending on a target parameter
+# Particle trajectory depending on a target parameter
 ###########################################################
 
 using Plots; gr()
 
-k = 1/(4*pi*8.85*10^(-12)) #constant: k=1/(4pi*e0)
-e = 1.6*10^(-19) #charge of electron in coulombs
-alpha_q = 2*e #charge of alpha-particle in coulombs
-alpha_m = 6.64456*10^(-27) #mass of alpha-particle in kilos
-Au_q = 79*e #charge of Au particle in coulombs
-Au_d = 10^(-14) #diameter of Au atom in meters
+k = 1/(4*pi*8.85e-12) 
+e = 1.6e-19 
+alpha_q = 2*e 
+alpha_m = 6.64456e-27 
+Au_q = 79*e 
+Au_d = 1e-14
 
-v0 = 10^7 #initial velocity of alpha-particle
+v0 = 1e7 
 
-wholeTime = 10^(-13)
-dt = 10^(-15)
+wholeTime = 1e-13
+dt = 1e-20
 
 h = 0.00001
 tmp = k * Au_q * alpha_q * dt / alpha_m
@@ -27,7 +27,8 @@ p = scatter(tx, ty,
 	xlims = (-3e-13, 5e-13), 
 	ylims = (-3e-13, 7e-13),
 	label = "Au",
-	formatter = :scientific
+	formatter = :scientific,
+	title = "Depending on b"
 )
 
 for b in params	
