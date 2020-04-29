@@ -14,7 +14,7 @@ Au_d = 1e-14
 v0 = 1e7 
 
 wholeTime = 1e-13
-dt = 1e-20
+dt = 1e-15
 
 h = 0.00001
 tmp = k * Au_q * alpha_q * dt / alpha_m

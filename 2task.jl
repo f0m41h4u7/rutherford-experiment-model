@@ -15,7 +15,7 @@ h = 0.00001 #accuracy parameter
 #################### Depending on q #######################
 v0 = 1e+7
 m = 6.64456e-27
-Q = 79*e
+Q = -79*e
 
 tx = [0, 1337]
 ty = [0, 1337]
@@ -27,7 +27,7 @@ p_q = scatter(tx, ty,
 	title="Depending on q"
 )
 
-charges = [-2.85*e, -1.03*e, 0.23e, 1e-23, 3*e, 5*e]
+charges = [-2.85*e, -1.03*e, 0.23e, 1e-23, 3*e, 5*e, 100e, 120e]
 
 for q in charges
 	tmp = k * Q * q * dt / m
@@ -70,7 +70,7 @@ p_Q = scatter(tx, ty,
 	title="Depending on Q"
 )
 
-charges = [-110*e, -50*e, -10*e, 5*e, 26*e, 40*e, 99*e]
+charges = [-110*e, -50*e, -10*e, 5*e, 26*e, 40*e, 99*e, e, 0.5e]
 
 for Q in charges
         tmp = k * Q * q * dt / m
